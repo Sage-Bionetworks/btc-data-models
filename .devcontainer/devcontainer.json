@@ -1,0 +1,22 @@
+{
+  "name": "BTC Data Models",
+  "image": "sagebionetworks/sage-devcontainer:0cde36d",
+
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2.0.0": {
+      "version": "20.10.21"
+    }
+  },
+
+  "settings": {},
+
+  "extensions": [],
+
+  "forwardPorts": [],
+
+  "portsAttributes": {},
+
+	"remoteUser": "vscode",
+  "shutdownAction": "stopContainer",
+  "runArgs": ["--name", "btc-data-models_devcontainer"]
+}

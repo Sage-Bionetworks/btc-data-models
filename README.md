@@ -34,3 +34,59 @@ This repository contains 3 major files:
    File(s)](https://sage-schematic.readthedocs.io/en/develop/README.html#fill-in-configuration-file-s)
    section of the schematic
    [docs](https://sage-schematic.readthedocs.io/en/develop/index.html).
+
+## Usage
+
+### Install Schematic
+
+```console
+mkdir tmp
+cd tmp
+
+git clone --single-branch --branch main https://github.com/Sage-Bionetworks/schematic.git
+cd schematic
+poetry build
+pip3 install dist/schematicpy-*-py3-none-any.whl
+
+~/.local/bin/schematic --help
+```
+
+### Login with the Synapse client
+
+The Synapse client is installed along with Schematic.
+
+```
+~/.local/bin/synapse login --rememberMe
+```
+
+Enter your Synapse Personal Access Token (PAT) when prompted. The token must
+have at least the `View`, `Download` and `Modify` permissions (TODO: to
+confirm.)
+
+### Initialize Schematic
+
+```console
+~/.local/bin/schematic init --config config.yml
+```
+
+### Generate the data model manifest
+
+As an Excel sheet:
+
+```console
+~/.local/bin/schematic manifest \
+  --config config.yml get \
+  --data_type BulkRNA-seqLevel1 \
+  --title "Test BulkRNA-seq" \
+  --output_xlsx btc.model.xlsx
+```
+
+As a Goole sheet:
+
+```console
+~/.local/bin/schematic manifest \
+  --config config.yml get \
+  --data_type BulkRNA-seqLevel1 \
+  --title "Test BulkRNA-seq" \
+  --sheet_url
+```

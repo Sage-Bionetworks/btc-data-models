@@ -16,13 +16,13 @@ manifest:
   # if making many manifests, just include name prefix
   title: 'example'
   # to make all manifests enter only 'all manifests'
-  data_type: 
+  data_type:
     - 'Biospecimen'
     - 'Patient'
 
 model:
   input:
-    location: 'tests/data/example.model.jsonld'
+    location: 'btc.model.jsonld'
     file_type: 'local'
 
 style:

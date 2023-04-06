@@ -47,6 +47,7 @@ git clone --single-branch --branch main https://github.com/Sage-Bionetworks/sche
 cd schematic
 poetry build
 pip3 install dist/schematicpy-*-py3-none-any.whl
+cd ..
 
 ~/.local/bin/schematic --help
 ```

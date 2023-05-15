@@ -22,8 +22,9 @@ manifest:
 
 model:
   input:
-    location: 'btc.model.jsonld'
+    location: 'Sage-Bionetworks/btc-data-models/btc.model.jsonld'
     file_type: 'local'
+    repo: 'Sage-Bionetworks/btc-data-models'
 
 style:
   google_manifest:

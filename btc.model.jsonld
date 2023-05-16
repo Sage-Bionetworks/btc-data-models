@@ -2416,6 +2416,11 @@
             },
             "sms:displayName": "Bulk RNA-seq Level 1",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:MockComponent"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -5893,6 +5898,28 @@
             },
             "sms:displayName": "Test Attribute 3",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MockComponent",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A mock component to demonstrate the use of the property \"DependsOn Component\"",
+            "rdfs:label": "MockComponent",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "mockComponent",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:BulkRNA-seqLevel1"
+                }
+            ],
             "sms:validationRules": []
         },
         {

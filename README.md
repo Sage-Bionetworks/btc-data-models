@@ -16,7 +16,7 @@ This repository contains 3 major files:
    sheet](https://docs.google.com/spreadsheets/d/1PVdQqi8R_pFRYESBcrpZHBPueT7kA2IuCIh8u_xBjyg).
 
 
-2. `example.model.jsonld`: The JSON-LD representation of the example data model,
+2. `btc.model.jsonld`: The JSON-LD representation of the example data model,
    which is automatically created from the CSV data model using the schematic
    CLI. More details on how to convert the CSV data model to the JSON-LD data
    model can be found
@@ -39,6 +39,14 @@ This repository contains 3 major files:
 
 ### Install Schematic
 
+#### From PyPi
+
+```
+python -m pip install schematicpy
+```
+
+#### From its source
+
 ```console
 mkdir tmp
 cd tmp
@@ -57,7 +65,7 @@ cd ..
 The Synapse client is installed along with Schematic.
 
 ```
-~/.local/bin/synapse login --rememberMe
+synapse login --rememberMe
 ```
 
 Enter your Synapse Personal Access Token (PAT) when prompted. The token must
@@ -67,7 +75,15 @@ confirm.)
 ### Initialize Schematic
 
 ```console
-~/.local/bin/schematic init --config config.yml
+schematic init --config config.yml
+```
+
+### Generate the data model in JSON-LD format
+
+The following command converts the data model from CSV to JSON-LD:
+
+```console
+schematic schema convert btc.model.csv
 ```
 
 ### Generate the data model manifest
@@ -75,17 +91,17 @@ confirm.)
 As an Excel sheet:
 
 ```console
-~/.local/bin/schematic manifest \
+schematic manifest \
   --config config.yml get \
   --data_type BulkRNA-seqLevel1 \
   --title "Test BulkRNA-seq" \
   --output_xlsx btc.model.xlsx
 ```
 
-As a Goole sheet:
+As a Google sheet:
 
 ```console
-~/.local/bin/schematic manifest \
+schematic manifest \
   --config config.yml get \
   --data_type BulkRNA-seqLevel1 \
   --title "Test BulkRNA-seq" \

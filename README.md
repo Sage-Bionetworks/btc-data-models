@@ -25,6 +25,18 @@ TODO
 
 ## Update the Data Model
 
+### Create a new git branch
+
+First, create a new branch in your local repo from the `main` branch. This
+branch will be used to open a PR that update the data model files.
+
+> **Note** Make sure that your `main` branch is up-to-date with the local repo
+> by running the command `git pull origin main`.
+
+```console
+git checkout -b my-new-branch origin/main
+```
+
 Update the data model in Google Sheet before exporting it to CSV format.
 
 1. Open the [BTC Data Model (Google Sheet)]
@@ -33,8 +45,6 @@ Update the data model in Google Sheet before exporting it to CSV format.
     - Click on `File` > `Download` > `Comma Separated Value (.csv)`
     - Name the file `btc.model.csv`
     - Download the CSV file
-
-
 
 4. Make sure the `main` branch 
 4. Create a new branch in this repo from the `main` branch

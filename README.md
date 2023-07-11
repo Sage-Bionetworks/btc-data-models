@@ -1,10 +1,47 @@
-# BTC Data Models
+# BTC Data Model
 
 ## Overview
 
 This repository contains the data model for Break Through Cancer (BTC).
 
-## Main files
+## Development Setup
+
+### Requirements
+
+- [Docker Engine] OR [GitHub Codespace]
+- [Visual Studio Code]
+
+### Open this repo in VS Code
+
+Click on the button shown below to open this repo in its [development container]
+with VS Code. This option is suitable if you want to explore the content of
+repo.
+
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode&style=for-the-badge)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/Sage-Bionetworks/btc-data-models 'Open in VS Code Dev Containers')
+
+### Open this repo in GitHub Codespace
+
+TODO
+
+## Update the Data Model
+
+Update the data model in Google Sheet before exporting it to CSV format.
+
+1. Open the [BTC Data Model (Google Sheet)]
+2. Update the data model
+3. Export the data model to CSV
+    - Click on `File` > `Download` > `Comma Separated Value (.csv)`
+    - Name the file `btc.model.csv`
+    - Download the CSV file
+
+
+
+4. Make sure the `main` branch 
+4. Create a new branch in this repo from the `main` branch
+    ```console
+    git checkout -b my-branch origin/main
+    ```
+
 
 This repository contains 3 major files:
 
@@ -107,3 +144,12 @@ schematic manifest \
   --title "Test BulkRNA-seq" \
   --sheet_url
 ```
+
+
+<!-- Links -->
+
+[docker engine]: https://docs.docker.com/get-docker/
+[visual studio code]: https://code.visualstudio.com/
+[GitHub Codespace]: https://github.com/features/codespaces
+[development container]: https://containers.dev/
+[BTC Data Model (Google Sheet)]: https://docs.google.com/spreadsheets/d/1CkNVuWSR3g1XEqWUP2taJfl9PZZIsnFu148tOIM0VRA/
